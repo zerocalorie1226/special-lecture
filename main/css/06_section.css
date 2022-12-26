@@ -11,24 +11,58 @@
 
 .grid-section .title {
   grid-area: title;
-  background: salmon;
+}
+.grid-section .title h3 {
+  font-weight: bold;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+.grid-section .title p {
+  font-size: 1.4rem;
+  color: var(--c-text-light);
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 .grid-section .post-list {
   grid-area: post;
-  background: sandybrown;
 }
 
 .grid-section .more {
   grid-area: more;
-  background: skyblue;
+  align-self: start;
+  justify-self: start;
+}
+
+.more {
+  background: rgba(var(--rgb-dark), 0.8);
+  color: rgb(var(--rgb-light));
+  border-radius: var(--border-radius);
+  padding: 0.2em 0.8em;
+  font-size: 0.85em;
+  text-transform: uppercase;
 }
 
 .latest {
   background: var(--c-light-gray);
+  padding: 19rem 0 10rem;
 }
 .video .max-width {
   grid-template:
     'post title ' auto
     'post more ' 1fr/3fr 1fr;
+}
+
+@media (max-width: 1024px) {
+  .grid-section .max-width {
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-section .more {
+    margin: auto;
+  }
 }
