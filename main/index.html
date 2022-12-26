@@ -10,15 +10,74 @@
     <link rel="stylesheet" href="./css/00_reset.css" />
     <link rel="stylesheet" href="./css/00_common.css" />
     <link rel="stylesheet" href="./css/01_layout.css" />
+    <link rel="stylesheet" href="./css/02_header.css" />
+    <link rel="stylesheet" href="./css/03_footer.css" />
+    <link rel="stylesheet" href="./css/04_visual.css" />
+    <link rel="stylesheet" href="./css/06_section.css" />
   </head>
 
   <body>
     <div class="wrap">
-      <header>
-        <div class="max-width">header</div>
-      </header>
-      <main><div class="max-width">main</div></main>
-      <footer><div class="max-width">footer</div></footer>
+      <div class="wrap">
+        <!-- header -->
+        <header>
+          <div class="max-width">
+            <!-- logo -->
+            <h1>
+              <a href="#">
+                <img src="./img/logo.svg" alt="My Blog" />
+              </a>
+            </h1>
+            <!-- //logo -->
+            <!-- search -->
+            <form class="search-form">
+              <label for="search" class="sr-only">검색</label>
+              <input type="text" id="search" placeholder="search" />
+              <button type="submit">
+                <img src="./img/icon-search.svg" alt="검색" />
+              </button>
+            </form>
+            <!-- //search -->
+
+            <!-- profile button -->
+            <button type="button" class="profile-btn">
+              <img src="./img/profile.jpg" alt="프로필 보기" />
+            </button>
+            <!-- //profile button -->
+          </div>
+        </header>
+        <!-- //header -->
+        <main>
+          <!-- visual -->
+          <div class="visual">
+            <h2>Skateboard</h2>
+            <img src="./img/main-visual.jpg" alt="배경 이미지" />
+          </div>
+
+          <section class="grid-section latest">
+            <div class="max-width">
+              <div class="title">title</div>
+              <div class="post-list">post</div>
+              <div class="more">more</div>
+            </div>
+          </section>
+
+          <section class="grid-section video">
+            <div class="max-width">
+              <div class="title">title</div>
+              <div class="post-list">post</div>
+              <div class="more">more</div>
+            </div>
+          </section>
+          <!-- //visual -->
+        </main>
+        <!-- footer -->
+        <footer>
+          <p>Copyright 2022. <strong>CHILLI</strong> All rights reserved.</p>
+          <a href="#" class="btn-top">TOP</a>
+        </footer>
+        <!-- //footer -->
+      </div>
     </div>
   </body>
 </html>

@@ -3,30 +3,21 @@
   flex-direction: column;
   min-height: 100vh;
 }
-/* safari 버그 : 모바일 사파리 브라우저 화면에서 
+/* safari : 모바일 사파리 브라우저 화면에서 
 높이값을 100vh로 줄 경우, 주소창이 하단을 가리는 현상을 해결하기 위한 CSS
-https://notes.zander.wtf/ios-safari-height-bug
 */
 @supports (-webkit-touch-callout: none) {
   .wrap {
     min-height: -webkit-fill-available;
   }
 }
-header {
-  background-color: salmon;
-}
-
-main {
-  flex-grow: 1;
-  background-color: slateblue;
-}
 
 footer {
-  background-color: skyblue;
+  background: skyblue;
+  height: 5em;
 }
 
 .max-width {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: min(calc(var(--max-width) * 1rem), 100%);
+  width: min(calc(var(--max-width) * 1rem), calc(100% - 10vw));
   margin: auto;
 }

@@ -1,0 +1,34 @@
+.grid-section {
+  padding: 10vw 0;
+}
+.grid-section .max-width {
+  display: grid;
+  grid-template:
+    'title post' auto
+    'more post' 1fr/1fr 3fr;
+  gap: 2.4rem;
+}
+
+.grid-section .title {
+  grid-area: title;
+  background: salmon;
+}
+
+.grid-section .post-list {
+  grid-area: post;
+  background: sandybrown;
+}
+
+.grid-section .more {
+  grid-area: more;
+  background: skyblue;
+}
+
+.latest {
+  background: var(--c-light-gray);
+}
+.video .max-width {
+  grid-template:
+    'post title ' auto
+    'post more ' 1fr/3fr 1fr;
+}
